@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.inputbox{
+    @apply text-black p-2 shadow-xl border-spacing-1 rounded-md;
+
+}
+
+.btn{
+    @apply text-white p-3 bg-gradient-to-tr from-blue-700 to-blue-500 rounded-lg hover:scale-105 hover:duration-300;
+}
+
+.table {
+  @apply table-auto border-collapse w-full;
+}
+
+.table th {
+  @apply border p-2 bg-gray-200 text-left;
+}
+
+.table td {
+  @apply border-white p-2;
+}
+
+.msg{
+    @apply inline-block bg-green-600 text-white px-4 py-2 m-2 rounded-lg shadow-md whitespace-nowrap;
+}
+
+.err{
+    @apply inline-block bg-red-600 text-white px-4 py-2 m-2 rounded-lg shadow-md whitespace-nowrap;
+}
