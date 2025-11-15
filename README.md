@@ -1,6 +1,6 @@
 
 
-## 📦 ProductTrac – Inventory & Product Management Application
+##  ProductTrac – Inventory & Product Management Application
 
 A simple and efficient **Product Management Web Application** built using **React.js**, **Tailwind CSS**, **FastAPI**, and **PostgreSQL**.
 
