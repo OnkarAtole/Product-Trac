@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
  const api=axios.create({
-    baseURL:"http://localhost:8000",
+    baseURL: import.meta.env.VITE_API_URL,
   })
     
 export default function Container(){
@@ -30,7 +30,13 @@ export default function Container(){
     setLoading(true);
     try{
       const res=await api.get("/products/");
-      setProducts(res.data);
+       setProducts(
+        Array.isArray(res.data)
+          ? res.data
+          : Array.isArray(res.data.products)
+          ? res.data.products
+          : []
+      );
       setError("");
     }catch(err){
       setError("failed to fetch data")

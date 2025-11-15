@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os
 app=FastAPI()
-
+load_dotenv() 
 
 # app.add_middleware(
 #     CORSMiddleware,
