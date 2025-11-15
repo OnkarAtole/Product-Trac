@@ -16,7 +16,7 @@ load_dotenv()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[os.getenv("url")],  # No trailing slash
+    allow_origins=["*"],  # No trailing slash
     allow_credentials=True,
     allow_methods=["*"],  # Allow all methods: GET, POST, PUT, DELETE
     allow_headers=["*"],  # Allow all headers
@@ -65,7 +65,7 @@ def add_product(product:Product,db:Session=Depends(get_db)):
 def update_product(id:int,product:Product,db:Session=Depends(get_db)):
     db_product=db.query(database_models.Product).filter(database_models.Product.id==id).first()
     if(db_product):
-        db_product.id=product.id
+        # db_product.id=product.id
         db_product.name=product.name
         db_product.description=product.description
         db_product.price=product.price
